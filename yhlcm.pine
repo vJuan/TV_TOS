@@ -1,0 +1,52 @@
+//@version=4
+//December 2019
+//April 2022 update: Adding alert conditons asked by @HTVH and option to select another resolutions asked by @ganuda, @ebizupper and other users.
+study("High Low Yesterday",overlay=true,shorttitle="High Low Yesterday")
+res = input(title="Resolution", defval="D", type=input.resolution)
+useColors = input(title="Fill with colors?",defval=true)
+plotBreakouts = input(title="Plot breakouts?",defval=true)
+plotMidPrice = input(title="Display mid-price?",defval=true)
+plotMidPriceBreakouts = input(title="Display mid-price breakouts?",defval=false)
+isess = session.regular
+t = tickerid(syminfo.prefix, syminfo.ticker, session=isess)
+igaps = barmerge.gaps_off
+yesterdayHigh = security(t,res,high[1],gaps=igaps, lookahead=barmerge.lookahead_on)
+yesterdayLow = security(t,res,low[1],gaps=igaps, lookahead=barmerge.lookahead_on)
+yesterdayClose = security(t,res,close[1],gaps=igaps, lookahead=barmerge.lookahead_on)
+midPrice = (yesterdayHigh - yesterdayLow) / 2 + yesterdayLow
+
+// Define alert conditions:
+// Breakout up is when the current close price crosses up the previous day high
+// Breakout down is when the current close price crosses down the previous day low
+// Breakout Rejected is when the previous close is below previous day low AND then it crosses above previous day low, or previous close is above previous day high and then it crosses down previous high
+breakout_up = crossover(close, yesterdayHigh) or (close[1] < yesterdayHigh and close > yesterdayHigh)
+breakout_down = crossunder(close,yesterdayLow) or (close[1] > yesterdayLow and close < yesterdayLow)
+breakout_fake = (close[1] > yesterdayHigh and crossunder(close, yesterdayHigh)) or (close[1] < yesterdayLow and crossover(close,yesterdayLow))
+breakout_up_midprice = close[1] < midPrice and close > midPrice
+breakout_down_midprice = close[1] > midPrice and close < midPrice
+
+// -----------
+// Plotting
+// -----------
+
+// Lines
+a = plot(yesterdayHigh, color=color.rgb(0, 0, 0), linewidth=1, style=plot.style_linebr, title = " Y High")
+b = plot(yesterdayLow, color=color.white, linewidth=1, style=plot.style_linebr,  title = " Y Low")
+plot(yesterdayClose, color=color.rgb(75, 56, 22), linewidth=1, style=plot.style_linebr, title = " Y Close")
+
+//fill(a,b,color=(useColors? close>yesterdayHigh ? color.black : (close < yesterdayLow ? color.white : color.white) : color.black))
+plot(plotMidPrice ? midPrice : na, color=color.rgb(75, 56, 22), linewidth=1, style=plot.style_cross, title = " Y Mid Price", transp=95)
+
+// Breakouts
+plot((plotBreakouts and breakout_up) ? yesterdayHigh : na, style=plot.style_circles,color=color.green, linewidth=5, title="Breakout Up")
+plot((plotBreakouts and breakout_down) ? yesterdayLow : na, style=plot.style_circles,color=color.red, linewidth=5, title="Breakout Down")
+plot((plotBreakouts and breakout_fake) ? (close[1] > yesterdayHigh ? yesterdayHigh : yesterdayLow) : na, style=plot.style_cross,color=color.orange, linewidth=4, title="Fake Breakout")
+plot((plotMidPriceBreakouts and breakout_up_midprice) ? midPrice : na, style=plot.style_circles,color=color.green, linewidth=5, title="Breakout midPrice Up")
+plot((plotMidPriceBreakouts and breakout_down_midprice) ? midPrice : na, style=plot.style_circles,color=color.red, linewidth=5, title="Breakout midPrice Down")
+
+// Fire alert conditions
+alertcondition(breakout_up,"Breakout previous high")
+alertcondition(breakout_down,"Breakout previous low")
+alertcondition(breakout_fake,"Breakout rejected")
+alertcondition(breakout_up_midprice,"Breakout midprice high")
+alertcondition(breakout_down_midprice,"Breakout midprice low")
