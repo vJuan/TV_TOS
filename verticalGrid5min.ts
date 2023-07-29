@@ -1,0 +1,88 @@
+input show_verticallines = yes;
+defineGlobalColor("V",color.white);
+addverticalLine(show_verticallines and secondsFromTime(0930)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(0935)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(0940)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(0945)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(0950)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(0955)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1000)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1005)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1010)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1015)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1020)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1025)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1030)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1035)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1040)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1045)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1050)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1055)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1100)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1105)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1110)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1115)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1120)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1125)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1130)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1135)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1140)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1145)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1150)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1155)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1200)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1205)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1210)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1215)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1220)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1225)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1230)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1235)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1240)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1245)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1250)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1255)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1300)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1305)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1310)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1315)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1320)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1325)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1330)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1335)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1340)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1345)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1350)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1355)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1400)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1405)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1410)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1415)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1420)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1425)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1430)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1435)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1440)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1445)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1450)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1455)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1500)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1505)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1510)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1515)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1520)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1525)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1530)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1535)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1540)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1545)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1550)==0,"",globalColor("V"));
+addverticalLine(show_verticallines and secondsFromTime(1555)==0,"",globalColor("V"));
+
+addverticalLine(show_verticallines and secondsFromTime(1600)==0,"",globalColor("V"));
